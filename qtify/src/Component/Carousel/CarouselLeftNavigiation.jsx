@@ -7,19 +7,15 @@ import styles from './Carousel.module.css'
 const CarouselLeftNavigiation = () => {
     const swiper = useSwiper();
     const [isBeginning, setIsBeginning] = useState(swiper.isBeginning);
-    console.log(isBeginning)
 
     useEffect(() => {
         swiper.on("slideChange", function(){
-          console.log(isBeginning)
           setIsBeginning(swiper.isBeginning);
-          console.log(isBeginning)
         })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isBeginning])
+    }, [isBeginning, swiper])
   return (
     <div className={styles.leftNavigation} >
-        {!isBeginning && <img src={LeftArrow} alt="Left Arrow" onClick={() => swiper.slidePrev()} />}
+        {isBeginning ? null : <img src={LeftArrow} alt="Left Arrow" onClick={() => swiper.slidePrev()} /> }
     </div>
   )
 }

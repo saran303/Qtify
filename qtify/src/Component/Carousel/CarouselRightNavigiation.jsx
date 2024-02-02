@@ -12,8 +12,7 @@ const CarouselRightNavigiation = () => {
         swiper.on("slideChange", function(){
             setIsEnd(swiper.isEnd);
         })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isEnd])
+    }, [swiper])
   return (
     <div className={styles.rightNavigation} >
         {!isEnd && <img src={RightArrow} alt="Right Arrow" onClick={() => swiper.slideNext()}  />}  
