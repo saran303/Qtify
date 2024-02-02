@@ -16,10 +16,10 @@ const CarouselLeftNavigiation = () => {
           console.log(isBeginning)
         })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [isBeginning])
   return (
     <div className={styles.leftNavigation} >
-        {isBeginning && <img src={LeftArrow} alt="Left Arrow" onClick={() => swiper.slidePrev()} />}
+        {!isBeginning && <img src={LeftArrow} alt="Left Arrow" onClick={() => swiper.slidePrev()} />}
     </div>
   )
 }
