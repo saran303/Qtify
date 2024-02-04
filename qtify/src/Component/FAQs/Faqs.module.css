@@ -1,0 +1,28 @@
+.wrapper{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+h1{
+    margin: 30px;
+}
+.accordionSummary{
+    height: 78px;
+    width: 1135px;
+    background-color: var(--color-black);
+    border-radius: 10px;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--color-white);
+}
+.accordionDescription{
+    height: 78px;
+    width: 1135px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+   border-radius: 10px;
+    padding: 24px 32px;
+}
